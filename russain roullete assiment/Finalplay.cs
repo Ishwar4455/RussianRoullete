@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
+using System.Media;
+using System.Reflection;
 namespace russain_roullete_assiment
 {
     public partial class Finalplay : Form
@@ -20,18 +22,28 @@ namespace russain_roullete_assiment
         make maker = new make();
         private void Loaderbtn_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(@"C:\Users\ishwa\Desktop\russain roullete assiment\res\load.jpg");
+            spinnerbtn.Enabled = true;
+            Loaderbtn.Enabled = false;
+            
+            Assembly myasses = Assembly.GetExecutingAssembly();
+            Stream myst = myasses.GetManifestResourceStream("russain roullete assiment.properties.resources.load");
+            
+            imagebox.Image = (russain_roullete_assiment.Properties.Resources.load);
+            
 
 
 
-            spinnerbtn .Enabled = true;
-            Loaderbtn .Enabled = false;
+
+            
         }
 
         private void spinnerbtn_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(@"C:\Users\ishwa\Desktop\russain roullete assiment\res\spin.jpg");
+          
+            Assembly myasses = Assembly.GetExecutingAssembly();
+            Stream myst = myasses.GetManifestResourceStream("russain roullete assiment.properties.resources.spin");
 
+            imagebox.Image = (russain_roullete_assiment.Properties.Resources.spin);
             maker.loader = spinrand.Next(1, 6);//place the bullete in one of 6 chamber
 
             Shooterbtn .Enabled = true;
@@ -40,10 +52,14 @@ namespace russain_roullete_assiment
 
         private void Shooterbtn_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(@"C:\Users\ishwa\Desktop\russain roullete assiment\res\shoot.jpg");
+            Assembly myasses = Assembly.GetExecutingAssembly();
+            Stream myst = myasses.GetManifestResourceStream("russain roullete assiment.properties.resources.shoot");
 
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\ishwa\Desktop\russain roullete assiment\res\3.wav");
-            player.Play();//plays the sound
+            imagebox.Image = (russain_roullete_assiment.Properties.Resources.shoot);
+
+            
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(russain_roullete_assiment.Properties.Resources._3);
+            player.Play();
             if (maker.total > 0 && maker.loader == 1)
             {
 

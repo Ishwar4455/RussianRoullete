@@ -22,5 +22,10 @@ namespace russain_roullete_assiment
             (new Finalplay ()).Show();
             this.Hide();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

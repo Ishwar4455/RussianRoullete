@@ -33,8 +33,8 @@
             this.Shooterbtn = new System.Windows.Forms.Button();
             this.Missbtn = new System.Windows.Forms.Button();
             this.Retrybtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.imagebox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.imagebox)).BeginInit();
             this.SuspendLayout();
             // 
             // Loaderbtn
@@ -94,11 +94,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(175, 115);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(439, 293);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.imagebox.Location = new System.Drawing.Point(175, 115);
+            this.imagebox.Name = "pictureBox1";
+            this.imagebox.Size = new System.Drawing.Size(439, 293);
+            this.imagebox.TabIndex = 5;
+            this.imagebox.TabStop = false;
             // 
             // Finalplay
             // 
@@ -106,7 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imagebox);
             this.Controls.Add(this.Retrybtn);
             this.Controls.Add(this.Missbtn);
             this.Controls.Add(this.Shooterbtn);
@@ -114,7 +114,7 @@
             this.Controls.Add(this.Loaderbtn);
             this.Name = "Finalplay";
             this.Text = "Finalplay";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagebox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -126,6 +126,6 @@
         private System.Windows.Forms.Button Shooterbtn;
         private System.Windows.Forms.Button Missbtn;
         private System.Windows.Forms.Button Retrybtn;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imagebox;
     }
 }
